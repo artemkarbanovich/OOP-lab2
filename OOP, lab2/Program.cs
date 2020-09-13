@@ -6,12 +6,12 @@ namespace OOP__lab2
     {
         static void Main(string[] args)
         {
-            ex1();
-            ex2();
+            //Ex1();
+            Ex2();
 
         }
 
-        static void ex1()
+        static void Ex1()
         {
             // Задание №1a
             Console.WriteLine("\t\tЗадание №1a");
@@ -100,9 +100,52 @@ namespace OOP__lab2
             Console.WriteLine($"переменная nullable = {nullVar2}");
         }
 
-        static void ex2()
+        static void Ex2()
         {
             // Задание №1a
+            Console.WriteLine("\n\n\t\tЗадание №2a\n");
+
+            string str1 = "Привет";
+            string str2 = "мир!";
+
+            int result = String.Compare(str1, str2);
+            if(result < 0)
+            {
+                Console.WriteLine("Строка str1 стоит перед str2\n");
+            }
+            else if(result > 0)
+            {
+                Console.WriteLine("Строка str1 стоит после str2\n");
+            }
+            else if(result == 0)
+            {
+                Console.WriteLine("Строки равны\n");
+            }
+
+
+
+            // Задание №2b
+            string s1 = "строка 1 ";
+            string s2 = "строка 2 ";
+            string s3 = "строка 3 ";
+            string s4 = "Вот такие вот дела";
+
+            Console.WriteLine(String.Concat(s1, s2) + "\n");
+
+            Console.WriteLine(s2.Insert(7, s3) + "\n");
+
+            string[] wordsS4 = s4.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (string s in wordsS4)
+            {
+                Console.Write($"{ s }, ");
+            }
+
+            Console.WriteLine("\n\n" + s4.Substring(4, 9) + "\n");
+
+
+
+
+
 
         }
     }
