@@ -16,10 +16,11 @@ namespace OOP__lab2
             // Задание №5
             Console.WriteLine("\n\n\t\tЗадание №5\n");
 
-            Console.WriteLine("Минимальный элемент: " + Ex5(new int[] { 4, -3, 10, -18, 22 }, "строка-путешественник").Item1);
-            Console.WriteLine("Максимальный элемент: " + Ex5(new int[] { 4, -3, 10, -18, 22 }, "строка-путешественник").Item2);
-            Console.WriteLine("Сумма всех элементов: " + Ex5(new int[] { 4, -3, 10, -18, 22 }, "строка-путешественник").Item3);
-            Console.WriteLine("Первый элемент в строке: " + Ex5(new int[] { 4, -3, 10, -18, 22 }, "строка-путешественник").Item4);
+            Tuple<int, int, int, char> tupleEx5 = Ex5(new int[] { 4, -3, 10, -18, 22 }, "строка-путешественник");
+            Console.WriteLine("Минимальный элемент: " + tupleEx5.Item1);
+            Console.WriteLine("Максимальный элемент: " + tupleEx5.Item2);
+            Console.WriteLine("Сумма всех элементов: " + tupleEx5.Item3);
+            Console.WriteLine("Первый элемент в строке: " + tupleEx5.Item4);
 
             // Задание №6
             Console.WriteLine("\n\n\t\tЗадание №6\n");
@@ -382,6 +383,5 @@ namespace OOP__lab2
                 return intVar + ten;
             }
         }
-
     }
 }
